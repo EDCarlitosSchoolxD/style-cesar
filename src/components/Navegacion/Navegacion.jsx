@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Navegacion.css'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {BsFillCartFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { ListBox } from '../ListBox/ListBox'
+import CarContext from '../../context/car/CarContext'
 export const Navegacion = () => {
     const [isOpen,setIsOpen] = useState(false);
 
+    const {products} = useContext(CarContext);
 
 
     function toggleMenu(){
@@ -25,7 +27,8 @@ export const Navegacion = () => {
                 <Link to="/" className='bar-logo'>STYLE</Link>
 
                 <div className='bar-car'>
-                    <BsFillCartFill />
+                    <Link to="/carrito"><BsFillCartFill /></Link>
+                    <span className='text-white'>{products.length}</span>
                 </div>
             </div>
             

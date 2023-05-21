@@ -1,9 +1,10 @@
 import React from 'react'
 import { Carousel } from 'flowbite-react'
-export const CarouselC = ({children,size="30rem",sizeMd="40rem"}) => {
+export const CarouselC = ({children,size,sizeMd="40rem"}) => {
+  console.log(size);
   return (
     
-<div className={`h-[${size}] md:h-[${sizeMd}] `}>
+<div className={`h-[50rem]  md:h-[${sizeMd}] `}>
   <Carousel>
     {children}
     

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Navegacion } from '../components/Navegacion/Navegacion'
 import { Link } from 'react-router-dom'
 import './Login.css'
+import CarContext from '../context/car/CarContext'
 export const Login = () => {
+  const carContext = useContext(CarContext);
   return (
     <>
       <Navegacion />

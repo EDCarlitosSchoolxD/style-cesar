@@ -7,7 +7,7 @@ export const Home = () => {
     <>
       <Navegacion />
       <CarouselC size="50rem" sizeMd="80rem" >
-        <img className="h-full object-cover"
+        <img className="h-full w-full object-cover"
         src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
         alt="..."
       />
